@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoang Van Long | Backend Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styke.css">
+</head>
+<body>
+
+<header>
+    <div class="container nav-container">
+        <div class="logo">Hoang Van Long</div>
+        <nav>
+            <a href="#home" class="tab active">Home</a>
+            <a href="#about" class="tab">About</a>
+            <a href="#skills" class="tab">Skills</a>
+            <a href="#experience" class="tab">Experience</a>
+            <a href="#projects" class="tab">Projects</a>
+            <a href="#contact" class="tab">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section id="home" class="section hero">
+    <div class="container">
+        <h1>Backend Developer</h1>
+        <!-- <p>Java • Spring Boot • Microservices • Kubernetes</p> -->
+    </div>
+</section>
+
+<section id="about" class="section">
+    <div class="container">
+        <h2>About Me</h2>
+        <p>
+            <ul>
+            <li>Backend engineer focused on scalable microservice architecture,
+            RESTful API design, distributed tracing, and CI/CD automation.</li>
+            <li>Experience in real investment domain projects (OCBS Invest) using C, Node.js.</li>
+            <li>Strong background in RDBMS indexing and NoSQL (Document, Graph).</li>
+            <li>Solid understanding of RESTful API and distributed systems.</li>
+            <li>Experience in microservices, system design and refactoring legacy services.</li>
+            <li>Collaborated in Agile/Scrum environments and wrote technical documentation.</li>
+            </ul>
+        </p>
+    </div>
+</section>
+
+<section id="skills" class="section alt">
+    <div class="container">
+        <h2>Tech Stack</h2>
+        <div class="grid">
+            <div class="card">Java</div>
+            <div class="card">C/C++</div>
+            <div class="card">Python</div>
+            <div class="card">Go</div>
+            <div class="card">PostgreSQL</div>
+            <div class="card">MongoDB</div>
+            <div class="card">Elastich search</div>
+            <div class="card">MySQL</div>
+            <div class="card">Linux</div>
+            <div class="card">Docker</div>
+            <div class="card">Kubernertes</div>
+            <div class="card">Prometheous</div>
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="section alt">
+    <div class="container">
+        <h2>Experience</h2>
+
+        <div class="project-card">
+            <h3>
+                <a href="https://invest.ocbs.com.vn/" target="_blank" rel="noopener noreferrer">OCBS Invest</a>
+            </h3>
+            <p>Microservice architecture include event streaming.</p>
+            <div class="project-actions">
+                <button onclick="openModal(0)">View Details</button>
+                <a href="https://invest.ocbs.com.vn/" target="_blank">Live</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="projects" class="section alt">
+    <div class="container">
+        <h2>Projects</h2>
+
+        <div class="project-card">
+            <h3>Online Chat</h3>
+            <p>Handle event with Websocket.</p>
+            <div class="project-actions">
+                <button onclick="openModal(1)">View Details</button>
+                <!-- <a href="https://realtime-chat-ea18.onrender.com/" target="_blank">GitHub</a> -->
+                <a href="https://realtime-chat-ea18.onrender.com/" target="_blank">Live</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Intelligent Tutoring System</h3>
+            <p>Microservice architecture with Kafka, natural language search.</p>
+            <div class="project-actions">
+                <button onclick="openModal(2)">View Details</button>
+                <a href="https://github.com/hoangvanlongse/ktpm" target="_blank">GitHub</a>
+                <!-- <a href="https://yourproduct.com" target="_blank">Live</a> -->
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>Payment Processing System</h3>
+            <p>Transaction-safe design with idempotency and resilience patterns.</p>
+            <div class="project-actions">
+                <button onclick="openModal(3)">View Details</button>
+                <a href="https://github.com/longhoang130704/wallet" target="_blank">GitHub</a>
+                <!-- <a href="https://yourpaymentdemo.com" target="_blank">Live</a> -->
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+        <ul id="modal-features"></ul>
+    </div>
+</div>
+
+<section id="contact" class="section alt">
+    <div class="container">
+        <h2>Contact</h2>
+        <p>Email: hoangvanlong.se@gmail.com</p>
+        <p>Zalo: 0912833432</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Hoang Van Long - Backend Developer
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
