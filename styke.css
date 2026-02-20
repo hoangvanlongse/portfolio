@@ -1,3 +1,5 @@
+/* Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,11 +11,30 @@
 body {
     background: #f8fafc;
     color: #1e293b;
+    font-size: 16px;
+    line-height: 1.7;
 }
+
+/* Container */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 a {
     text-decoration: none;
     color: inherit;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+h2 {
+    margin-bottom: 18px;
 }
 
 /* Header */
@@ -31,7 +52,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 8%;
+    padding: 15px 0;
 }
 
 .logo {
@@ -46,7 +67,6 @@ nav {
 }
 
 .tab {
-    text-decoration: none;
     color: #475569;
     font-weight: 500;
     position: relative;
@@ -72,32 +92,39 @@ nav {
 /* Sections */
 
 .section {
-    padding: 120px 8% 80px 8%;
+    padding: 70px 0;
 }
 
+/* Hero */
+
 .hero {
+    padding: 110px 0 50px;
     text-align: center;
-    padding-top: 160px;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: clamp(2.2rem, 5vw, 3rem);
     color: #2563eb;
+    margin-bottom: 10px;
 }
+
+/* Alternate background */
 
 .alt {
     background: #e0f2fe;
 }
 
-h2 {
-    margin-bottom: 25px;
+/* About list */
+
+.about-list li {
+    margin-bottom: 8px;
 }
 
 /* Grid */
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
@@ -107,7 +134,7 @@ h2 {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .card:hover {
@@ -124,34 +151,32 @@ h2 {
     box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
-/* Footer */
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #2563eb;
-    color: white;
-}
+/* Project actions */
 
 .project-actions {
     margin-top: 15px;
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .project-actions button,
 .project-actions a {
     padding: 8px 14px;
     border-radius: 6px;
-    text-decoration: none;
     border: none;
     cursor: pointer;
     font-size: 14px;
+    transition: 0.3s ease;
 }
 
 .project-actions button {
     background: #2563eb;
     color: white;
+}
+
+.project-actions button:hover {
+    opacity: 0.9;
 }
 
 .project-actions a {
@@ -178,9 +203,10 @@ footer {
 
 .modal-content {
     background: white;
-    margin: 10% auto;
+    width: 90%;
+    max-width: 700px;
+    margin: 8% auto;
     padding: 30px;
-    width: 60%;
     border-radius: 10px;
     position: relative;
 }
@@ -191,4 +217,13 @@ footer {
     right: 20px;
     font-size: 20px;
     cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2563eb;
+    color: white;
 }
