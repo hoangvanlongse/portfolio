@@ -1,6 +1,25 @@
 const tabs = document.querySelectorAll(".tab");
 const sections = document.querySelectorAll("section");
 
+// Reveal animation for sections when scrolling
+const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    },
+    {
+        threshold: 0.15
+    }
+);
+
+sections.forEach(section => {
+    revealObserver.observe(section);
+});
+
 window.addEventListener("scroll", () => {
     let current = "";
 
@@ -16,6 +35,23 @@ window.addEventListener("scroll", () => {
         if (tab.getAttribute("href").includes(current)) {
             tab.classList.add("active");
         }
+    });
+});
+
+// Background music autoplay with fallback
+window.addEventListener("load", () => {
+    const audio = document.getElementById("bg-music");
+    if (!audio) return;
+
+    // Cố gắng autoplay (có thể bị chặn tùy trình duyệt)
+    audio.volume = 0.4;
+    audio.play().catch(() => {
+        // Nếu bị chặn, chờ người dùng scroll lần đầu rồi play
+        const onFirstScroll = () => {
+            audio.play().catch(() => {});
+            window.removeEventListener("scroll", onFirstScroll);
+        };
+        window.addEventListener("scroll", onFirstScroll);
     });
 });
 
